@@ -1,0 +1,191 @@
+body	{ 
+	width: 100%; 
+	height: 100%;
+	background: #ecebea;
+
+	margin: 0px; 
+	padding: 0px; 
+}
+
+a:hover	{
+	text-decoration: none;
+}
+
+
+h2	{ 
+	font-size: 1.1em; 
+	color: #800040; 
+	margin-top: 0; 
+	font-weight: bold; 
+}
+
+h1	{ 
+	font: italic 36px Times New Roman; 
+	color: #964444; 
+	text-align: center;
+	
+	margin-top: 0; 
+}
+
+p	{ 
+	margin: 5px 0px 15px 0px; 
+}
+
+ul,
+ol	{ 
+	margin: 10px; 
+}
+
+li	{ 
+	margin: 0px 0px 5px 10px; 
+	list-style-type: disc; 
+}
+
+
+#wrapper	{  
+
+	margin: 0 auto; 
+	padding: 0px;
+}
+
+.left-column	{ 
+	background: url("../images/left-ico.png") no-repeat left top;
+	width: 300px;
+	height: 363px;
+	float: left;
+}
+
+.left-column .razdel	{ 
+	position: relative;
+	top: 90px;
+}
+
+
+#content	{
+	width: 75%;
+	position: relative;
+	z-index: 30;
+	float: left;
+	top: 30px;
+}
+
+header	{ 
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+/* menu
+--------------------------------- */
+nav	{
+	padding-top: 20px;
+	text-align: center;
+}
+
+nav #tabs li	{
+	list-style: none;
+	display: inline-block;
+	background: url("../images/arrow.jpg") no-repeat right 8px;
+	
+	padding: 0 25px 0 25px;
+	margin: 0;	
+}
+
+
+nav li a	{
+	display: block;
+	width: auto;
+	font: italic 20px Times New Roman;
+	color: #170b0b;
+	
+	padding: 0 15px 5px 15px;
+}
+
+nav li.active a	{
+	border-bottom: 1px solid gray;
+	border-radius: 10px;
+}
+
+nav li.active span	{
+	background: url("../images/menu-active.png") no-repeat center bottom;
+	height: 0px;
+	display: block;
+	padding: 0 0px 10px 0px;
+}
+
+.tab1,
+.tab2,
+.tab3	 {
+	display: none;
+}
+
+.tab1.active,
+.tab2.active,
+.tab3.active	{
+	display: block;
+}
+/* end */
+
+/* list article
+---------------------------- */
+
+section	{
+	padding: 20px 20px 20px 20px;
+	background: #f0f0f0;
+	border-radius: 15px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+article a	{
+	font: 20px Tahoma;
+	color: #964444;
+}
+
+article p	{
+	font: 15px Arial;
+	color: #585252;
+}
+/* end */
+
+/* paginator
+------------------------------- */
+nav.paginator	{
+	text-align: center;
+}
+
+nav.paginator li	{
+	list-style: none;
+	display: inline-block;
+	background: none;
+}
+
+nav.paginatora	{
+	color: #7e7a7a;
+	font: italic 21px Times New Roman;
+}
+
+nav.paginator .active a	{
+	color: #964444;
+	font: italic 21px Times New Roman;
+	font-weight: bold;
+	text-decoration: none;
+	border: none;
+}
+/* end */
+
+
+footer	{
+
+}
+
+
+.bg-footer	{
+	background: url('../images/right-bg.png') no-repeat right 0px;
+	width: 100%;
+	height: 550px;
+	position: absolute;
+	bottom: 0;
+	z-index: 5;
+}
