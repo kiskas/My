@@ -169,33 +169,13 @@ nav li.active span	{
 -------------------------------*/
 nav.tabs-cont  {
     text-align: left;
+    height: 17px;
 }
 
-.tab-container  {
-    color: #dfac84;
-    background-image: linear-gradient(bottom, #69503B 48%, #90755B 74%, #90755B 87%);
-    background-image: -o-linear-gradient(bottom, #69503B 48%, #90755B 74%, #90755B 87%);
-    background-image: -moz-linear-gradient(bottom, #69503B 48%, #90755B 74%, #90755B 87%);
-    background-image: -webkit-linear-gradient(bottom, #69503B 48%, #90755B 74%, #90755B 87%);
-    background-image: -ms-linear-gradient(bottom, #69503B 48%, #90755B 74%, #90755B 87%);
-
-    background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0.48, #69503B),
-        color-stop(0.74, #90755B),
-        color-stop(0.87, #90755B)
-    );
-    padding: 20px 0 20px 0;
-}
-
-.tab-container .tab1,
-.tab-container .tab2,
-.tab-container .tab3,
-.tab-container .tab4  {
-    width: 1024px;
-    margin: 0 auto;
+nav.tabs-cont ul  {
+    padding: 0;
+    position: relative;
+    top: -20px;
 }
 
 li.tab1,
@@ -206,7 +186,7 @@ li.tab4  {
 }
 
 
-nav.tabs-cont #tabs li {
+nav #tabs li {
     float: left;
     width: auto;
     padding: 0;
@@ -266,22 +246,36 @@ nav #tabs li.active a {
     position: absolute;
     bottom: 0;
 }
+
 /* Только первая, последная и активная вкладка создают псевдоэлементы, остальным они не нужны*/
 #tabs li:last-child:after,   #tabs li:last-child a:after,
 #tabs li:first-child:before, #tabs li:first-child a:before,
-#tabs .active:after,   #tabs #active:before,
-#tabs .active a:after, #tabs #active a:before {
+#tabs .active:after,   #tabs .active:before,
+#tabs .active a:after, #tabs .active a:before {
     content: "";
 }
 #tabs .active:before, #tabs .active:after {
-    background: white;
+    background: #b69473;
 
     /* Прямоугольники под окружностями */
     z-index: 1;
 }
 /* Прямоугольники */
 #tabs li:before, #tabs li:after {
-    background: #ddc385;
+    background-image: linear-gradient(bottom, #80674F 48%, #80674F 74%, #6C5B4A 87%);
+    background-image: -o-linear-gradient(bottom, #80674F 48%, #80674F 74%, #6C5B4A 87%);
+    background-image: -moz-linear-gradient(bottom, #80674F 48%, #80674F 74%, #6C5B4A 87%);
+    background-image: -webkit-linear-gradient(bottom, #80674F 48%, #80674F 74%, #6C5B4A 87%);
+    background-image: -ms-linear-gradient(bottom, #80674F 48%, #80674F 74%, #6C5B4A 87%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.48, #80674F),
+        color-stop(0.74, #80674F),
+        color-stop(0.87, #6C5B4A)
+    );
     width: 10px;
     height: 10px;
 }
@@ -299,25 +293,68 @@ nav #tabs li.active a {
     -webkit-border-radius: 10px;
     -moz-border-radius:    10px;
     border-radius:         10px;
-    background: #222;
+    background: #574231;
 
     /* Окружности над прямоугольниками */
     z-index: 2;
 }
 #tabs .active a:after, #tabs .active a:before {
-    background: #ddc385;
+    background-image: linear-gradient(bottom, #6C5B4A 87%);
+    background-image: -o-linear-gradient(bottom, #6C5B4A 87%);
+    background-image: -moz-linear-gradient(bottom, #6C5B4A 87%);
+    background-image: -webkit-linear-gradient(bottom, #6C5B4A 87%);
+    background-image: -ms-linear-gradient(bottom, #6C5B4A 87%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.74, #80674F)
+    );
 }
 /* Первая и последняя вкладки обладают разными фоновыми цветами у внешних элементов*/
 #tabs li:first-child.active a:before,
 #tabs li:last-child.active a:after {
-    background: #222;
+    background: #574231;
 }
+
 #tabs li a:before {
     left: -20px;
 }
+
 #tabs li a:after {
     right: -20px;
 }
+
+
+.tab-container  {
+    color: #dfac84;
+    background-image: linear-gradient(bottom, #69503B 48%, #90755B 74%, #90755B 87%);
+    background-image: -o-linear-gradient(bottom, #69503B 48%, #90755B 74%, #90755B 87%);
+    background-image: -moz-linear-gradient(bottom, #69503B 48%, #90755B 74%, #90755B 87%);
+    background-image: -webkit-linear-gradient(bottom, #69503B 48%, #90755B 74%, #90755B 87%);
+    background-image: -ms-linear-gradient(bottom, #69503B 48%, #90755B 74%, #90755B 87%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.48, #69503B),
+        color-stop(0.74, #90755B),
+        color-stop(0.87, #90755B)
+    );
+    padding: 20px 0 20px 0;
+}
+
+.tab-container .tab1,
+.tab-container .tab2,
+.tab-container .tab3,
+.tab-container .tab4  {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+
 
 
 /* end */
