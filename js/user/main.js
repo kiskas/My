@@ -1,7 +1,7 @@
 ﻿$().ready(function() {
 
 // tabs
-    var tab_cont = ['tab1','tab2','tab3'];
+    var tab_cont = ['tab1','tab2','tab3','tab4'];
     function tabs(){
 
         // hide all tabs and him content

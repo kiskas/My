@@ -1,0 +1,159 @@
+body	{ 
+	width: 100%; 
+	height: 100%;
+    background: url('../images/bg.jpg') repeat center center;
+
+	margin: 0;
+	padding: 0;
+}
+
+a:hover	{
+	text-decoration: none;
+}
+
+p	{
+    margin: 5px 0 15px 0;
+}
+
+ul,
+ol	{
+    margin: 10px;
+}
+
+li	{
+    margin: 0 0 5px 10px;
+    list-style-type: disc;
+}
+
+#wrapper    {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+}
+
+header  {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-image: linear-gradient(
+        bottom,
+        #43352B 48%,
+        #6C5B4A 74%,
+        #6C5B4A 87%
+    );
+    background-image: -o-linear-gradient(
+        bottom,
+        #43352B 48%,
+        #6C5B4A 74%,
+        #6C5B4A 87%
+    );
+    background-image: -moz-linear-gradient(
+        bottom,
+        #43352B 48%,
+        #6C5B4A 74%,
+        #6C5B4A 87%
+    );
+    background-image: -webkit-linear-gradient(
+        bottom,
+        #43352B 48%,
+        #6C5B4A 74%,
+        #6C5B4A 87%
+    );
+    background-image: -ms-linear-gradient(
+        bottom,
+        #43352B 48%,
+        #6C5B4A 74%,
+        #6C5B4A 87%
+    );
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.48, #43352B),
+        color-stop(0.74, #6C5B4A),
+        color-stop(0.87, #6C5B4A)
+    );
+}
+
+header .logo,
+nav {
+    display: inline-block;
+}
+
+header .logo  {
+    background: url('../images/logo.png') no-repeat 51px 0;
+    padding-top: 14px;
+    width: 100px;
+}
+
+header .logo a  {
+    color: #dfac84;
+    font: 18px Trebuchet MS;
+    text-decoration: none;
+}
+
+header .logo span  {
+    color: #c3b8a9;
+}
+
+
+
+/* menu
+--------------------------------- */
+nav	{
+    text-align: center;
+    width: 1024px;
+
+    margin: 0 auto;
+}
+
+nav ul	{
+    height: 27px;
+
+    padding: 10px 0 10px 0;
+    margin: 0;
+}
+
+nav li,
+nav #tabs li    {
+    list-style: none;
+    display: inline-block;
+
+    padding: 0 25px 0 25px;
+    margin: 0;
+}
+
+
+nav li a	{
+    display: block;
+    width: auto;
+    font: 16px Trebuchet MS;
+    color: #dfac84;
+
+    padding: 0 15px 5px 15px;
+}
+
+nav li.active a	{
+    text-decoration: none;
+}
+
+nav li.active span	{
+    height: 0px;
+    display: block;
+    padding: 0 0px 10px 0px;
+}
+
+.tab1,
+.tab2,
+.tab3,
+.tab4	 {
+    display: none;
+}
+
+.tab1.active,
+.tab2.active,
+.tab3.active,
+.tab4.active	{
+    display: block;
+}
+/* end */
