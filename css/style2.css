@@ -1,4 +1,8 @@
-body	{ 
+html {
+    height: 100%;
+}
+
+body	{
 	width: 100%; 
 	height: 100%;
     background: url('../images/bg.jpg') repeat center center;
@@ -27,8 +31,9 @@ li	{
 
 #wrapper    {
     width: 100%;
+    height: auto !important;
     height: 100%;
-    min-height: 500px;
+    min-height: 93%;
 }
 
 header  {
@@ -107,19 +112,18 @@ nav	{
     margin: 0 auto;
 }
 
-nav ul	{
-    height: 27px;
-
-    padding: 10px 0 10px 0;
-    margin: 0;
-}
-
-nav li,
-nav #tabs li    {
+nav li   {
     list-style: none;
     display: inline-block;
 
     padding: 0 25px 0 25px;
+    margin: 0;
+}
+
+nav ul	{
+    height: 27px;
+
+    padding: 10px 0 10px 0;
     margin: 0;
 }
 
@@ -143,6 +147,8 @@ nav li.active span	{
     padding: 0 0px 10px 0px;
 }
 
+/* tabs
+-------------------------- */
 .tab1,
 .tab2,
 .tab3,
@@ -155,5 +161,173 @@ nav li.active span	{
 .tab3.active,
 .tab4.active	{
     display: block;
+    text-align: left;
 }
+
+
+/* menu footer tabs
+-------------------------------*/
+nav.tabs-cont  {
+    text-align: left;
+}
+
+.tab-container  {
+    color: #dfac84;
+    background-image: linear-gradient(bottom, #69503B 48%, #90755B 74%, #90755B 87%);
+    background-image: -o-linear-gradient(bottom, #69503B 48%, #90755B 74%, #90755B 87%);
+    background-image: -moz-linear-gradient(bottom, #69503B 48%, #90755B 74%, #90755B 87%);
+    background-image: -webkit-linear-gradient(bottom, #69503B 48%, #90755B 74%, #90755B 87%);
+    background-image: -ms-linear-gradient(bottom, #69503B 48%, #90755B 74%, #90755B 87%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.48, #69503B),
+        color-stop(0.74, #90755B),
+        color-stop(0.87, #90755B)
+    );
+    padding: 20px 0 20px 0;
+}
+
+.tab-container .tab1,
+.tab-container .tab2,
+.tab-container .tab3,
+.tab-container .tab4  {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+li.tab1,
+li.tab2,
+li.tab3,
+li.tab4  {
+    display: block;
+}
+
+
+nav.tabs-cont #tabs li {
+    float: left;
+    width: auto;
+    padding: 0;
+    /* Что бы псевдоэлементы можно было абсолютно позиционировать в табах */
+    position: relative;
+}
+
+nav #tabs li a    {
+    /* Делаем якорь блочным элементом и укорачиваем до размера контента*/
+    float: left;
+    padding: 10px 40px;
+
+    /* Цвета по умолчанию */
+    color: #dfac84;
+    font: italic 16px Times New Roman;
+    background-image: linear-gradient(bottom, #80674F 48%, #80674F 74%, #6C5B4A 87%);
+    background-image: -o-linear-gradient(bottom, #80674F 48%, #80674F 74%, #6C5B4A 87%);
+    background-image: -moz-linear-gradient(bottom, #80674F 48%, #80674F 74%, #6C5B4A 87%);
+    background-image: -webkit-linear-gradient(bottom, #80674F 48%, #80674F 74%, #6C5B4A 87%);
+    background-image: -ms-linear-gradient(bottom, #80674F 48%, #80674F 74%, #6C5B4A 87%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.48, #80674F),
+        color-stop(0.74, #80674F),
+        color-stop(0.87, #6C5B4A)
+    );
+
+    /* Скругляем верхние уголки */
+    -webkit-border-top-left-radius: 15px;
+    -webkit-border-top-right-radius: 15px;
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-topright: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+
+nav #tabs li.active	{
+    /* Активную вкладку помещаем поверх остальных */
+    z-index: 3;
+}
+
+nav #tabs li.active a {
+    /* Цвета активной вкладки */
+    background: #b69473;
+    color: white;
+}
+
+#tabs li:before,
+#tabs li:after,
+#tabs li a:before,
+#tabs li a:after    {
+    /* Все псевдоэлементы абсолютно позиционированы относительно нижней грани*/
+    position: absolute;
+    bottom: 0;
+}
+/* Только первая, последная и активная вкладка создают псевдоэлементы, остальным они не нужны*/
+#tabs li:last-child:after,   #tabs li:last-child a:after,
+#tabs li:first-child:before, #tabs li:first-child a:before,
+#tabs .active:after,   #tabs #active:before,
+#tabs .active a:after, #tabs #active a:before {
+    content: "";
+}
+#tabs .active:before, #tabs .active:after {
+    background: white;
+
+    /* Прямоугольники под окружностями */
+    z-index: 1;
+}
+/* Прямоугольники */
+#tabs li:before, #tabs li:after {
+    background: #ddc385;
+    width: 10px;
+    height: 10px;
+}
+#tabs li:before {
+    left: -10px;
+}
+#tabs li:after {
+    right: -10px;
+}
+/* Окружности */
+#tabs li a:after, #tabs li a:before {
+    width: 20px;
+    height: 20px;
+    /* Окружности … э … крууугггглыыыыыеееее */
+    -webkit-border-radius: 10px;
+    -moz-border-radius:    10px;
+    border-radius:         10px;
+    background: #222;
+
+    /* Окружности над прямоугольниками */
+    z-index: 2;
+}
+#tabs .active a:after, #tabs .active a:before {
+    background: #ddc385;
+}
+/* Первая и последняя вкладки обладают разными фоновыми цветами у внешних элементов*/
+#tabs li:first-child.active a:before,
+#tabs li:last-child.active a:after {
+    background: #222;
+}
+#tabs li a:before {
+    left: -20px;
+}
+#tabs li a:after {
+    right: -20px;
+}
+
+
 /* end */
+
+
+footer  {
+    background: #574231;
+    text-align: center;
+    position: relative;
+
+    margin: 0 auto;
+}
+
